@@ -1,3 +1,5 @@
+# Serial and sequential floating text across multiple clients!
+# Use case: Demonstrate connecting multiple clients in the network
 from time import sleep
 from os import get_terminal_size, name, system
 from figlets import letters
@@ -12,7 +14,7 @@ for fig in letters:
     letters[fig] = transform_figlets(letters[fig])
 
 print("Welcome to Cereal!")
-command = input("(h)most a cereal or (j)oin an existing cereal:    ").lower()
+command = input("(h)ost a cereal or (j)oin an existing cereal:    ").lower()
 
 if command == "h":
     nclients = int(input("How many clients do you want?    "))

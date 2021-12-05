@@ -22,7 +22,7 @@ class CerealServer(Cereal, ThreadingMixIn, TCPServer):
     """
 
     def __init__(self):
-        self.super().__init__("server")
+        super().__init__("server")
         TCPServer.__init__(self, ("0.0.0.0", 0), ServerHandler)
         self.thread = None
         self.clients = [] # Information of connected clients. See _handle_payload

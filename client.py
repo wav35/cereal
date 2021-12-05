@@ -5,7 +5,7 @@ from common import Cereal
 
 class CerealClient(Cereal):
     def __init__(self, term_width: int):
-        self.super().__init__("client")
+        super().__init__("client")
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.term_width = term_width
 
